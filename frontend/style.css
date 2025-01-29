@@ -1,0 +1,146 @@
+/* General Body Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: url(./assets/testBG.png);
+    background-size: cover;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .container {
+    background: rgba(47, 47, 47, 0.516);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    animation: popIn 1s ease-out;
+  }
+  
+  h1 {
+    font-size: 2.8rem;
+    color: #ffcc00;
+    margin-bottom: 20px;
+    animation: fadeInDown 1.2s;
+    font-weight: 700;
+  }
+  
+  #fact-section {
+    font-size: 1.2rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 12px;
+    margin: 15px 0;
+    border-radius: 10px;
+    animation: slideUp 1.5s;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px solid #ffcc00;
+  }
+  
+  input[type="file"] {
+    padding: 12px;
+    border: 2px dashed #ffcc00;
+    background: transparent;
+    color: #ffffff;
+    border-radius: 8px;
+    outline: none;
+    text-align: center;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  input[type="file"]:hover {
+    border-color: #ff8800;
+  }
+  
+  button {
+    background: #ff8800;
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
+    background: #ffcc00;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  #uploadStatus {
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+    display: inline-block;
+    animation: fadeIn 1.2s;
+  }
+  
+  /* Animations */
+  @keyframes popIn {
+    0% {
+      transform: scale(0.9);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
