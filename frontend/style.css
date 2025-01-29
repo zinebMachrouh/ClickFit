@@ -15,6 +15,25 @@
     align-items: center;
     justify-content: center;
     padding: 20px;
+    position: relative;
+  }
+
+  .addUser {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background: #034f9a;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover {
+      background: #085cb1;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    }
   }
   
   .container {
@@ -48,7 +67,7 @@
   
   form {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     gap: 15px;
     background: rgba(255, 255, 255, 0.05);
@@ -75,8 +94,8 @@
   }
   
   button {
-    background: #ff8800;
-    color: #ffffff;
+    background: #034f9a !important;
+    color: #ffffff !important;
     border: none;
     padding: 12px 20px;
     font-size: 1rem;
@@ -86,8 +105,9 @@
   }
   
   button:hover {
-    background: #ffcc00;
+    background: #085cb1 !important;
     transform: translateY(-3px);
+    transition: all 0.3s ease;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
   }
   
