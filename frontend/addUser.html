@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Click Fit - Add User</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: url('./assets/testBG.png') no-repeat;
+      color: #fafafa;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      position: relative;
+    }
+
+    .addUser {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    color: #fafafa;
+    font-size: 2.3rem;
+    cursor: pointer;
+    text-decoration: none;
+
+        &:hover {
+        color: #f3f0ea;
+        transition: all 0.3s ease;
+        }
+    }
+
+    .card {
+        background: rgba(47, 47, 47, 0.337);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        padding: 30px;
+        border-radius: 20px;
+        max-width: 500px;
+        width: 100%;
+        animation: fadeIn 1s ease-out;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom:10px;
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #fafafa;
+    }
+
+    label {
+      color: #fafafa;
+      font-size: 0.95rem;
+      margin-top: 10px;
+    }
+
+    input[type="email"], input[type="password"], select {
+      background: #1E1E1E;
+      border: none;
+      color: white;
+      padding: 12px;
+      margin-top: 8px;
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    input[type="email"].error, input[type="password"].error {
+      border: 2px solid red;
+    }
+
+    .submit-btn {
+      background-color: #f0b42a;
+      color: #141518;
+      font-weight: bold;
+      border: none;
+      width: 100%;
+      padding: 12px;
+      margin-top: 16px;
+      cursor: pointer;
+      border-radius: 30px;
+      transition: all 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background-color: #f5be3e;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .form-feedback {
+      font-size: 0.9em;
+      color: #f0b42a;
+      margin-top: 5px;
+    }
+
+    #responseMessage {
+      margin-top: 15px;
+      font-size: 0.9rem;
+    }
+
+    /* Animation */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <a href="index.html" class="addUser"><i class="bi bi-arrow-left-circle-fill"></i>    </a>
+  <div class="card">
+    <h2 >Add New User</h2>
+    <form id="userForm">
+      <div class="mb-3">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter user email" required>
+        <div id="email-feedback" class="form-feedback"></div>
+      </div>
+
+      <div class="mb-3">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter user password" required>
+        <div id="password-feedback" class="form-feedback"></div>
+      </div>
+
+      <div class="mb-3">
+        <label for="type">User Type:</label>
+        <select id="type" name="type" required>
+          <option value="admin">Admin</option>
+          <option value="editor">Editor</option>
+          <option value="contributor">Contributor</option>
+        </select>
+      </div>
+
+        <div class="mb-3">
+            <label for="status">Status:</label>
+            <select id="status" name="status" required>
+            <option value="1">Active</option>
+            <option value="0">Inactive</option>
+            </select>
+
+      <button type="submit" class="submit-btn">Submit</button>
+      <div id="responseMessage"></div>
+    </form>
+  </div>
+
+</body>
+</html>
