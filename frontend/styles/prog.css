@@ -1,0 +1,118 @@
+header{
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.title{
+    color: #1e1e1e;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #fff;
+    font-size: 45px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.title h2:nth-child(2){
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #FFCB05;
+}
+#prog{
+    height: fit-content;
+    width: 100%;
+    padding: 40px 0px;
+    background: url(../assets/testBG.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.cards{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 35px;
+    justify-content: space-between;
+    padding: 50px 300px;
+}
+.card{
+    border-radius: 20px;
+    width: 350px;
+    overflow: hidden;
+    flex-direction: column;
+    height: 500px;
+    display: flex;
+    background-position: center;
+    background-size: cover;
+    justify-content: flex-end;
+
+}
+.card:nth-child(1){
+    background: url(../assets/p1.png) no-repeat;
+}
+.card:nth-child(2){
+    background: url(../assets/p2.png) no-repeat;
+}
+.card:nth-child(3){
+    background: url(../assets/p3.png) no-repeat;
+}
+.card:nth-child(4){
+    background: url(../assets/p4.png) no-repeat;
+}
+.card:nth-child(5){
+    background: url(../assets/p5.png) no-repeat;
+}
+.card:nth-child(6){
+    background: url(../assets/p6.png) no-repeat;
+}
+.card-text{
+    height: 15%;
+    transition: all ease .7s;
+    border-radius: 20px;
+    background: rgba(30, 30, 30, 0.75);
+    padding: 0px 20px;
+    backdrop-filter: blur(10px);
+}
+.card-text:hover{
+    height: 100%;
+}
+.card-text h2{
+    color: rgba(255, 255, 255, 0.75);
+    text-align: center;
+    padding: 20px 0px;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+.card-text:hover h2{
+    color: #FFCB05;
+
+}
+.card-text p{
+    color: #fff;
+    font-size: 15px;
+    padding: 10px 0px;
+}
+.card-text h4{
+    color: #FFCB05;
+    font-size: 16px;
+    font-weight: 500;
+    padding-top: 10px;
+}
+.card-text ul{
+    margin-bottom: 15px;
+}
+.card-text li{
+    color: #fff;
+    margin: 0px 20px;
+    text-transform: capitalize;
+}
+.card-text p i{
+    color: #FFCB05;
+    margin-right: 7px;
+}
+@media screen and (max-width:700px){
+    .cards{
+        padding: 50px;
+        justify-content: center;
+    }
+    .title{
+        font-size: 28px;
+    }
+}

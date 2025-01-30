@@ -65,25 +65,24 @@ Click Fit is a responsive sport and fitness website designed with animations and
 2. Run the following script to create the `users` table and the `addUser` stored procedure:
 
     ```sql
-    CREATE TABLE users (
+    CREATE TABLE IF NOT EXISTS users (
         ID INT NOT NULL AUTO_INCREMENT,
         email VARCHAR(255) CHARACTER SET 'utf8mb4' NOT NULL,
         password VARCHAR(255) CHARACTER SET 'utf8mb4' NOT NULL,
         type VARCHAR(255) CHARACTER SET 'utf8mb4' NOT NULL,
         active TINYINT DEFAULT 1,
         PRIMARY KEY (ID)
-    );
+            );
 
     DELIMITER //
-    CREATE PROCEDURE addUser(
-        IN userEmail VARCHAR(255),
-        IN userPassword VARCHAR(255),
-        IN userType VARCHAR(255)
-    )
+
+    CREATE PROCEDURE addUser(IN userEmail VARCHAR(255), userPassword VARCHAR(255), userType VARCHAR(255), userActive TINYINT)
     BEGIN
-        INSERT INTO users (email, password, type, active) VALUES (userEmail, userPassword, userType, 1);
+    INSERT INTO users (email, password, type, active) VALUES (userEmail, userPassword, userType, userActive);
     END //
+
     DELIMITER ;
+
     ```
 
 

@@ -56,7 +56,6 @@ $(document).ready(function () {
           $('#password-feedback').text('');
         }
 
-
         if (!isValid) return;
 
         $.ajax({
@@ -74,3 +73,29 @@ $(document).ready(function () {
         });
       });
   });
+
+
+  const questions = document.querySelectorAll('.qst');
+
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+  
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+questions.forEach((question) => {
+    question.addEventListener('click', () => {
+        const answer = question.nextElementSibling;
+        const chev = question.lastElementChild;
+        if (answer.style.display === 'flex') {
+            answer.style.display = 'none';
+            chev.style.transform = "rotate(0deg)";
+        } else {
+            answer.style.display = 'flex';
+            chev.style.transform = "rotate(180deg)";
+        }
+    });
+});
+
